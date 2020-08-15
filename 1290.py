@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        binary_number_str = 
+        binary_number_str = ''
         curr_node = head
         while curr_node:
             binary_number_str += str(curr_node.val)
