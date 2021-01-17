@@ -1,14 +1,14 @@
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
-        so = sorted(stones)
-        while (len(so) > 1):
-            e1 = so.pop()
-            e2 = so.pop()
+        while (len(stones) > 1):
+            e1 = max(stones)
+            stones.remove(e1)
+            e2 = max(stones)
+            stones.remove(e2)
             if e1 != e2:
-                so.append(e1 - e2)
-                so = sorted(so)
+                stones.append(e1 - e2)
 
-        if len(so) == 1:
-            return so[0]
+        if len(stones) == 1:
+            return stones[0]
         return 0
 
