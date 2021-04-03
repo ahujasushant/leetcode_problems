@@ -7,4 +7,3 @@ class Solution:
                 return [remain_nums[res], i]
             else:
                 remain_nums[nums[i]] = i
-
